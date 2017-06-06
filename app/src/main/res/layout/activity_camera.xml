@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    tools:context="com.intel.faceenrollment.CameraActivity">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        />
+
+    <ImageView
+        android:id="@+id/imageRing"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:srcCompat="@drawable/ring"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/imageCorner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_margin="15dp"
+        app:srcCompat="@drawable/corner"/>
+
+    <TextView
+        android:id="@+id/cameraTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To start, center your face with the circle"
+        android:textColor="#ffffff"
+        android:textSize="19sp"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="600dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:id="@+id/cameraImageButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="80dp"
+            android:background="@null"
+            app:srcCompat="@drawable/btn_camera_normal"/>
+
+        <ImageButton
+            android:id="@+id/saveImageButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            app:srcCompat="@drawable/btn_save_pressed"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/recognizeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textColor="#ffffff"
+        android:text="Recognize"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/cameraTextView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/UnRegisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textColor="#ffffff"
+        android:text="UnRegister"
+        android:layout_alignBottom="@+id/recognizeButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp" />
+
+
+</RelativeLayout>
